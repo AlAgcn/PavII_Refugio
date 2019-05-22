@@ -87,7 +87,7 @@
                         <div class="input-group-prepend">
                             <label class="input-group-text" for="inputTipoAnimal">Tipo de animal</label>
                         </div>
-                        <select class="custom-select" id="inputTipoAnimal">
+                        <select class="custom-select" ng-model="tipo" id="inputTipoAnimal">
                             <option selected>Elija su opcion</option>
                             <option value="Perro">Perro</option>
                             <option value="Gato">Gato</option>
@@ -99,20 +99,20 @@
                         <div class="input-group">
                             <span class="input-group-text" id="Nombre">Nombre</span>
                         </div>
-                        <input type="text" class="form-control" placeholder="Ingrese nombre">
+                        <input type="text" ng-model="nombre" class="form-control" placeholder="Ingrese nombre">
                     </div>
                     <div class="input-group mb-5">
                         <div class="input-group date">
                             <span class="input-group-text" id="Fecha">Fecha ingreso</span>
                         </div>
-                        <input type="date" class="form-control" placeholder="yyyy/mm/dd" />
+                        <input type="date" ng-model="fecha" class="form-control" placeholder="yyyy/mm/dd" />
 
                     </div>
                     <div class="input-group mb-5">
                         <div class="input-group">
                             <span class="input-group-text" id="Edad">Edad</span>
                         </div>
-                        <input type="number" class="form-control" placeholder="Ingrese edad aproximada">
+                        <input type="number" ng-model="age" class="form-control" placeholder="Ingrese edad aproximada">
                         <div class="input-group-append">
                             <span class="input-group-text">A&ntilde;os</span>
                         </div>
@@ -122,7 +122,7 @@
                         <div class="input-group">
                             <span class="input-group-text">Nro de Jaula</span>
                         </div>
-                        <input type="number" class="form-control" placeholder="Ingrese n&uacute;mero de jaula">
+                        <input type="number" class="form-control" ng-model="nroJaula" placeholder="Ingrese n&uacute;mero de jaula">
                     </div>
 
                     <div class="input-group mb-5">
@@ -138,7 +138,7 @@
                     </div>
                 </div>
                 <div class="card-footer">
-                    <a class="btn btn-primary btn-md" ng-click="mostrar()">Registrar</a>
+                    <a class="btn btn-primary btn-md" ng-click="agregar()">Registrar</a>
                 </div>
             </div>
             <!-- Fin primera columna-->
@@ -173,25 +173,7 @@
               </table>
           </div> <!--Fin columna-->
         </div> <!--Fin row 2-->
-    </div> <!--Fin container 2-->
-
-
-      <!-- /.col-md-4 -->
-      <!--<div class="col-md-4 mb-5">
-        <div class="card h-100">
-          <div class="card-body">
-            <h2 class="card-title">Card Three</h2>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem magni quas ex numquam, maxime minus quam molestias corporis quod, ea minima accusamus.</p>
-          </div>
-          <div class="card-footer">
-            <a href="#" class="btn btn-primary btn-sm">More Info</a>
-          </div>
-        </div>
-      </div> -->
-      <!-- /.col-md-4 -->
-
-    <!-- </div> -->
-    <!-- /.row -->
+    </div> <!--Fin container -->
 
   <!-- Pie de pagina -->
   <footer class="py-5 bg-dark">

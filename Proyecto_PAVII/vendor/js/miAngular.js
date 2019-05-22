@@ -4,14 +4,14 @@ miApp.controller("miController", function ($scope, $http) {
     { name: 'Catalino', type: 'gato', date: '21/04/2017', edad: '1', jaula: '15', adop: 'false' },
     { name: 'Pirlo', type: 'perro', date: '01/10/2019', edad: '3', jaula: '20', adop: 'true' }];
 
-    $scope.agregar = function (unAnimal)
+    $scope.agregar = function ()
     {
-        $scope.animales.push(unAnimal)
+        $scope.animales.push({ name: $scope.nombre, type: $scope.tipo, date: $scope.fecha, edad: $scope.age, jaula: $scope.jaula, adop:false })
     };
 
     $scope.mostrar = function () {
         window.alert('Prueba numero uno')
     }
 
-
+    $scope.mapAnimal = function
 });
