@@ -327,3 +327,4 @@ D:\Proyecto_Git\PavII_Refugio\Proyecto_PAVII\obj\Debug\Proyecto_PAVII.csproj.Cor
 D:\Proyecto_Git\PavII_Refugio\Proyecto_PAVII\obj\Debug\Proyecto_PAVII.csproj.CopyComplete
 D:\Proyecto_Git\PavII_Refugio\Proyecto_PAVII\obj\Debug\Proyecto_PAVII.dll
 D:\Proyecto_Git\PavII_Refugio\Proyecto_PAVII\obj\Debug\Proyecto_PAVII.pdb
+D:\Proyecto_Git\PavII_Refugio\Proyecto_PAVII\bin\Proyecto_PAVII.dll.config

@@ -11,7 +11,6 @@ miApp.controller("miController", function ($scope, $http) {
 
     $scope.mostrar = function () {
         window.alert('Prueba numero uno')
-    }
+    };
 
-    $scope.mapAnimal = function
 });
