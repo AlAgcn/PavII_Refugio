@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+﻿/<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -54,7 +54,7 @@
     <!-- Row de cabecera-->
     <div class="row align-items-center my-5">
       <div class="col-lg-7">
-        <img class="img-fluid rounded mb-4 mb-lg-0" src="https://d1kvlp4er3agpe.cloudfront.net/resources/images/groups/1/2/0/6/0/lswsw96gs1.png" alt="">
+        <img class="img-fluid rounded mb-4 mb-lg-0" src="imagenes/principal.jpg">
       </div>
       <!-- /.col-lg-8 -->
       <div class="col-lg-5">
@@ -122,7 +122,7 @@
                         <div class="input-group">
                             <span class="input-group-text">Nro de Jaula</span>
                         </div>
-                        <input type="number" class="form-control" ng-model="nroJaula" placeholder="Ingrese n&uacute;mero de jaula">
+                        <input type="number" ng-model="numJaula" class="form-control" placeholder="Ingrese n&uacute;mero de jaula">
                     </div>
 
                     <div class="input-group mb-5">
@@ -159,6 +159,7 @@
                           <th scope="col">Nombre</th>
                           <th scope="col">Fecha de ingreso</th>
                           <th scope="col">Edad</th>
+                          <th scope="col">Num de Jaula</th>
                       </tr>
                   </thead>
                   <tbody>
@@ -167,6 +168,7 @@
                           <td>{{animal.name}}</td>
                           <td>{{animal.date}}</td>
                           <td>{{animal.edad}}</td>
+                          <td>{{animal.jaula}}</td>
                       </tr>
 
                   </tbody>

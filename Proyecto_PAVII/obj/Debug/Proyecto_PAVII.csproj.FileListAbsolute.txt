@@ -54,7 +54,6 @@ P:\Proyectos_GIT\Proyecto_PAVII_Refugio\Proyecto_PAVII\obj\Debug\Proyecto_PAVII.
 P:\Proyectos_GIT\Proyecto_PAVII_Refugio\Proyecto_PAVII\obj\Debug\Proyecto_PAVII.csproj.CopyComplete
 P:\Proyectos_GIT\Proyecto_PAVII_Refugio\Proyecto_PAVII\obj\Debug\Proyecto_PAVII.dll
 P:\Proyectos_GIT\Proyecto_PAVII_Refugio\Proyecto_PAVII\obj\Debug\Proyecto_PAVII.pdb
-P:\Proyectos_GIT\PavII_Refugio\Proyecto_PAVII\bin\Proyecto_PAVII.dll.config
 P:\Proyectos_GIT\PavII_Refugio\Proyecto_PAVII\bin\Proyecto_PAVII.dll
 P:\Proyectos_GIT\PavII_Refugio\Proyecto_PAVII\bin\Proyecto_PAVII.pdb
 P:\Proyectos_GIT\PavII_Refugio\Proyecto_PAVII\bin\roslyn\csc.exe
@@ -271,7 +270,6 @@ G:\PavII_Refugio\Proyecto_PAVII\bin\Microsoft.CodeDom.Providers.DotNetCompilerPl
 G:\PavII_Refugio\Proyecto_PAVII\obj\Debug\Proyecto_PAVII.csprojResolveAssemblyReference.cache
 G:\PavII_Refugio\Proyecto_PAVII\obj\Debug\Proyecto_PAVII.dll
 G:\PavII_Refugio\Proyecto_PAVII\obj\Debug\Proyecto_PAVII.pdb
-P:\Proyectos_GIT\PavII_Refugio\Proyecto_PAVII\obj\Debug\Proyecto_PAVII.csprojResolveAssemblyReference.cache
 D:\Proyecto_Git\PavII_Refugio\Proyecto_PAVII\bin\Proyecto_PAVII.dll
 D:\Proyecto_Git\PavII_Refugio\Proyecto_PAVII\bin\Proyecto_PAVII.pdb
 D:\Proyecto_Git\PavII_Refugio\Proyecto_PAVII\bin\roslyn\csc.exe
@@ -328,3 +326,6 @@ D:\Proyecto_Git\PavII_Refugio\Proyecto_PAVII\obj\Debug\Proyecto_PAVII.csproj.Cop
 D:\Proyecto_Git\PavII_Refugio\Proyecto_PAVII\obj\Debug\Proyecto_PAVII.dll
 D:\Proyecto_Git\PavII_Refugio\Proyecto_PAVII\obj\Debug\Proyecto_PAVII.pdb
 D:\Proyecto_Git\PavII_Refugio\Proyecto_PAVII\bin\Proyecto_PAVII.dll.config
+P:\Proyectos_GIT\PavII_Refugio\Proyecto_PAVII\obj\Debug\Proyecto_PAVII.csprojAssemblyReference.cache
+P:\Proyectos_GIT\PavII_Refugio\Proyecto_PAVII\obj\Debug\Proyecto_PAVII.csproj.CoreCompileInputs.cache
+P:\Proyectos_GIT\PavII_Refugio\Proyecto_PAVII\obj\Debug\Proyecto_PAVII.csproj.CopyComplete
