@@ -1,0 +1,238 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Refugios animales S.A.</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="MyScripts/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="MyScripts/css/small-business.css" rel="stylesheet">
+
+    <!-- Scripts de Angular-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+    <script src="MyScripts/jquery/jquery.min.js"></script>
+    <script src="MyScripts/angularjs/miAngular.js"></script>
+
+</head>
+
+<body ng-app="angApp">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Bienvenido</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">
+                            Inicio
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Sobre nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Nuestros servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Comienza la pagina -->
+    <div class="container" ng-controller="animalesController">
+
+        <!-- Fila de Presentacion -->
+        <div class="row align-items-center my-5">
+            <div class="col-lg-7">
+                <img class="img-fluid rounded mb-4 mb-lg-0" src="imagenes/principal.jpg" alt="">
+            </div>
+            <!-- /.col-lg-8 -->
+            <div class="col-lg-5">
+                <h1 class="font-weight-light">Reino Animal S.A.</h1>
+                <p>
+                    Reino animal es una sociedad anonima que se dedica a darles refugio a animales de todo tipo
+                    que se encuentran en situacion de callle, ya sea porque fueron abandonados o nacieron
+                    sin un hogar. Nos mantenemos de donaciones y ventas de cosas dulces que nosotros
+                    mismos fabricamos para poder mantener el refugio.
+                </p>
+                <a class="btn btn-primary">Comencemos!</a>
+            </div>
+            <!-- /.col-md-4 -->
+        </div>
+        <!-- /.row -->
+        <!-- Call to Action Well -->
+        <div class="card text-white bg-secondary my-5 py-4 text-center">
+            <div class="card-body">
+                <p class="text-white m-0">
+                    Ante cualquier avistamiento de animales en situacion de calle o consultas no dude en contactarnos.
+                </p>
+            </div>
+        </div>
+
+        <!-- Comienzan los Forms -->
+        <div class="row">
+            <div class="col-12">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h2 class="card-title">Listado de animales en el refugio</h2>
+                        <!-- Tabla de todos los animales-->
+                        <table class="table table-striped table-responsive-lg">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th scope="col">Id</th>
+                                    <th scope="col">Nombre</th>
+                                    <th scope="col">Edad</th>
+                                    <th scope="col">Especie</th>
+                                    <th scope="col">Nro Jaula</th>
+                                    <th scope="col">Fecha de Ingreso</th>
+                                    <th scope="col">En adopcion</th>
+                                    <th scope="col">Modificar</th>
+                                    <th scope="col">Eliminar</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="an in animales">
+                                    <td>{{an.id}}</td>
+                                    <td>{{an.nombre}}</td>
+                                    <td>{{an.edad}}</td>
+                                    <td>{{Join(an.tipo)}}</td>
+                                    <td>{{an.nroJaula}}</td>
+                                    <td>{{an.fechaIngreso | date: "dd/MM/yyyy"}}</td>
+                                    <td>{{an.adopcion}}</td>
+
+                                    <td>
+                                        <button type="button" class="btn btn-secondary"
+                                                ng-click="Modificar(an)">
+                                            Modificar
+                                        </button>
+                                    </td>
+
+                                    <td>
+                                        <button type="button" class="btn btn-danger"
+                                                ng-click="Eliminar(an.id)">
+                                            Eliminar
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table> <!--Fin de la tabla-->
+                    </div> <!-- Fin del cuerpo de carta-->
+
+                    <div class="card-footer">
+                        <button class="btn btn-primary btn-sm" ng-click="GetAll()">Cargar todos</button>
+                        <button class="btn btn-info btn-sm" ng-click="Nuevo()">Nuevo</button>
+                    </div>
+                </div>
+
+            </div> <!-- Fin de columna -->
+
+        </div> <!-- Fin row 1 -->
+
+        <form>
+
+            <div class="form-row" ng-show="estado=='M' || estado=='A'">
+                <div class="col col-lg-6 col-sm-12">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h2 class="card-title">Registrar nuevos datos</h2>
+                            <!-- Combo box-->
+                            <div class="input-group mb-5">
+                                <div class="input-group-prepend">
+                                    <label class="input-group-text" for="inputTipoAnimal">Tipo de animal</label>
+                                </div>
+                                <select class="custom-select" ng-model="animal.tipo">
+                                    <option ng-selected="animal.tipo == t.id_tipo"
+                                            ng-repeat="t in tipos | orderBy: 'descripcion'" ng-value="t.id_tipo">
+                                        {{t.descripcion}}
+                                    </option>
+                                </select>
+                            </div>
+                            <!-- Comienzan los textbox-->
+                            <div class="input-group mb-5">
+                                <div class="input-group">
+                                    <span class="input-group-text">Nombre</span>
+                                </div>
+                                <input type="text" ng-model="animal.nombre" ng-minlength="3" ng-maxlength="15"
+                                       class="form-control" placeholder="Ingrese nombre" required>
+                            </div>
+                            <div class="input-group mb-5">
+                                <div class="input-group date">
+                                    <span class="input-group-text">Fecha ingreso</span>
+                                </div>
+                                <input type="date" date="dd/MM/yyyy" ng-model="animal.fechaIngreso"
+                                       class="form-control" placeholder="dd/MM/yyyy" />
+
+                            </div>
+                            <div class="input-group mb-5">
+                                <div class="input-group">
+                                    <span class="input-group-text">Edad</span>
+                                </div>
+                                <input type="number" ng-model="animal.edad" ng-maxlength="2"
+                                       class="form-control" placeholder="Ingrese edad aproximada" required>
+                                <div class="input-group-append">
+                                    <span class="input-group-text">A&ntilde;os</span>
+                                </div>
+                            </div>
+
+                            <div class="input-group">
+                                <div class="input-group">
+                                    <span class="input-group-text">Nro de Jaula</span>
+                                </div>
+                                <input type="number" ng-model="animal.nroJaula" ng-maxlength="3"
+                                       class="form-control" placeholder="Ingrese n&uacute;mero de jaula" required>
+                            </div> <br />
+
+                            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                <span class="input-group-text">En adopcion </span>
+                                <label class="btn btn-outline-dark" ng-click="CambiarEstado('true')">
+                                    <input type="radio" name="options" autocomplete="off" checked> Si
+                                </label>
+                                <label class="btn btn-outline-dark" ng-click="CambiarEstado('false')">
+                                    <input type="radio" name="options" autocomplete="off"> No
+                                </label>
+                            </div>
+
+                        </div> <!-- Fin cuerpo de carta 2-->
+
+                        <div class="card-footer">
+                            <a class="btn btn-success btn-lg" ng-show=".$isValid" ng-click="GuardarCambios()">Guardar</a>
+                        </div>
+                    </div> <!-- Fin carta 2-->
+                </div>
+            </div>
+        </form>
+
+
+    </div> <!-- Fin del container -->
+
+    <!-- Pie de pagina -->
+    <footer class="py-5 bg-dark">
+        <div class="container">
+            <p class="m-0 text-center text-white">Derechos reservados &copy; Ali Correa UTN-FRC</p>
+        </div>
+        <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="MyScripts/jquery/jquery.min.js"></script>
+    <script src="MyScripts/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
