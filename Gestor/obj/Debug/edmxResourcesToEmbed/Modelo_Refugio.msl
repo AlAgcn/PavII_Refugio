@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="PavIIModelStoreContainer" CdmEntityContainer="AnimalesEntity">
+    <EntitySetMapping Name="Animales">
+      <EntityTypeMapping TypeName="PavIIModel.Animales">
+        <MappingFragment StoreEntitySet="Animales">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="tipo" ColumnName="tipo" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="edad" ColumnName="edad" />
+          <ScalarProperty Name="nroJaula" ColumnName="nroJaula" />
+          <ScalarProperty Name="fechaIngreso" ColumnName="fechaIngreso" />
+          <ScalarProperty Name="adopcion" ColumnName="adopcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tipos">
+      <EntityTypeMapping TypeName="PavIIModel.Tipos">
+        <MappingFragment StoreEntitySet="Tipos">
+          <ScalarProperty Name="id_tipo" ColumnName="id_tipo" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

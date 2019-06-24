@@ -1,0 +1,12 @@
+P:\Proyectos_GIT\Refugio Animales\Gestor\obj\Debug\Gestor.csproj.CoreCompileInputs.cache
+P:\Proyectos_GIT\Refugio Animales\Gestor\bin\Debug\Gestor.exe.config
+P:\Proyectos_GIT\Refugio Animales\Gestor\bin\Debug\Gestor.exe
+P:\Proyectos_GIT\Refugio Animales\Gestor\bin\Debug\Gestor.pdb
+P:\Proyectos_GIT\Refugio Animales\Gestor\bin\Debug\EntityFramework.dll
+P:\Proyectos_GIT\Refugio Animales\Gestor\bin\Debug\EntityFramework.SqlServer.dll
+P:\Proyectos_GIT\Refugio Animales\Gestor\bin\Debug\EntityFramework.xml
+P:\Proyectos_GIT\Refugio Animales\Gestor\bin\Debug\EntityFramework.SqlServer.xml
+P:\Proyectos_GIT\Refugio Animales\Gestor\obj\Debug\Gestor.csproj.CopyComplete
+P:\Proyectos_GIT\Refugio Animales\Gestor\obj\Debug\Gestor.exe
+P:\Proyectos_GIT\Refugio Animales\Gestor\obj\Debug\Gestor.pdb
+P:\Proyectos_GIT\Refugio Animales\Gestor\obj\Debug\Gestor.csprojAssemblyReference.cache

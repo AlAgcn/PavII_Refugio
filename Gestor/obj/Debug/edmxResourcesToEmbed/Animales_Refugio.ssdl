@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Refugio_Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Animales">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="tipo" Type="int" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="15" />
+    <Property Name="edad" Type="int" />
+    <Property Name="nroJaula" Type="int" Nullable="false" />
+    <Property Name="fechaIngreso" Type="date" />
+    <Property Name="adopcion" Type="bit" />
+  </EntityType>
+  <EntityType Name="Tipos">
+    <Key>
+      <PropertyRef Name="id_tipo" />
+    </Key>
+    <Property Name="id_tipo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="descripcion" Type="varchar" MaxLength="15" />
+  </EntityType>
+  <EntityContainer Name="Refugio_ModelStoreContainer">
+    <EntitySet Name="Animales" EntityType="Self.Animales" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tipos" EntityType="Self.Tipos" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

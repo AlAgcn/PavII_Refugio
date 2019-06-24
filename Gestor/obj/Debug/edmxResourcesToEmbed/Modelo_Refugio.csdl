@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PavIIModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Animales">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="tipo" Type="Int32" Nullable="false" />
+    <Property Name="nombre" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="edad" Type="Int32" />
+    <Property Name="nroJaula" Type="Int32" Nullable="false" />
+    <Property Name="fechaIngreso" Type="DateTime" Precision="0" />
+    <Property Name="adopcion" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="Tipos">
+    <Key>
+      <PropertyRef Name="id_tipo" />
+    </Key>
+    <Property Name="id_tipo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="descripcion" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="AnimalesEntity" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Animales" EntityType="Self.Animales" />
+    <EntitySet Name="Tipos" EntityType="Self.Tipos" />
+  </EntityContainer>
+</Schema>
