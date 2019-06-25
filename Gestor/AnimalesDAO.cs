@@ -85,6 +85,7 @@ namespace Gestor
             catch (Exception ex)
             {
                 return false;
+                throw ex;
             }
         }
     }
